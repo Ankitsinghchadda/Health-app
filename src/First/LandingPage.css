@@ -1,0 +1,25 @@
+.first_section {
+    background-color: #0EB6FF;
+    padding: 4rem 5rem;
+
+}
+
+.first_section_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headingfirst {
+    margin: 0;
+}
+
+.buttonStyle1 {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 1.2rem 1.5rem;
+    background-color: #000C83;
+    color: white;
+    font-weight: bold;
+}
