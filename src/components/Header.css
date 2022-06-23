@@ -1,0 +1,59 @@
+.header_main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.menuItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchwithPrescreption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.6rem;
+    margin-right: 0.5rem;
+    background-color: #E7EDFF;
+
+}
+
+
+
+.searchbar_input {
+    border: none;
+    font-size: 1rem;
+    margin: 0.4rem;
+    width: 90%;
+    background-color: #E7EDFF;
+}
+
+.searchbar_input:focus {
+    outline: none;
+}
+
+.uploadPrescription {
+    padding: 0.25rem;
+}
+
+.selectState>select {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.selectState>select:focus {
+    outline: none;
+}
