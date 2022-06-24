@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import Slider from "../components/Slider";
 import CircleImage from "../components/CircleImage";
+import LabTestCards from "../components/LabTestCards";
 
 const Landingpage = () => {
   return (
@@ -63,7 +64,61 @@ const Landingpage = () => {
       </div>
       <div className="fifth_section">
         <div className="fifth_section_heading">
-          Most Commonly Booked Test <button>see more</button>
+          Most Commonly Booked Tests <button>see more</button>
+        </div>
+        <div className="labtest_cards">
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including measuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+        </div>
+      </div>
+      <div className="fifth_section">
+        <div className="fifth_section_heading">
+          Most Commonly Booked Pakages <button>see more</button>
+        </div>
+        <div className="labtest_cards">
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
         </div>
       </div>
     </div>

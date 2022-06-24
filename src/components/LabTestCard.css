@@ -1,0 +1,80 @@
+.labtest_card {
+    margin: 1rem;
+    padding: 2rem 4rem;
+    background-color: #deffde;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.card_firstSection,
+.card_secondSection,
+.card_thirdSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card_heading>h3,
+.card_heading>h4 {
+    margin: 0;
+}
+
+.card_offer {
+    background-color: #10B7FF;
+    padding: 0.2rem 0.4rem;
+    color: white;
+}
+
+.card_price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_description {
+    width: 25rem;
+}
+
+.card_price>h3,
+.card_availabity>h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.card_price>span {
+    font-size: 1.3rem;
+}
+
+.labtest_addButton {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #000C83;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.card_availabity {
+    text-align: center;
+}
+
+.card_knowMore {
+    font-size: 1rem;
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.card_knowMore:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+
+}

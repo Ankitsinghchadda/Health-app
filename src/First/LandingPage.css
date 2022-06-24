@@ -25,6 +25,7 @@
     background-color: #000C83;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .second_section {
@@ -107,4 +108,19 @@
 .fifth_section {
     /* margin: 1rem 2rem; */
     padding: 2rem;
+}
+
+.fifth_section_heading>button {
+    border-radius: 0.8rem;
+    border: none;
+    color: white;
+    padding: 0.3rem;
+    background-color: #0EB6FF;
+}
+
+.labtest_cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
