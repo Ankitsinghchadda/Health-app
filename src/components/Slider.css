@@ -1,0 +1,33 @@
+.slider {
+    margin: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 5rem;
+    background-color: #052B00;
+    border-radius: 0.8rem;
+}
+
+.slider_text {
+    flex: 1;
+}
+
+.slider_image {
+    flex: 1;
+}
+
+.slider_text>h4,
+.slider_text>h2 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+    color: #C9E5FE;
+}
+
+.slider_text_para {
+    margin: 1.5rem 0;
+}
+
+.slider_text_para>p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #C9E5FE;
+}

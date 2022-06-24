@@ -1,6 +1,9 @@
 .first_section {
     background-color: #0EB6FF;
     padding: 4rem 5rem;
+    margin: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 }
 
@@ -22,4 +25,86 @@
     background-color: #000C83;
     color: white;
     font-weight: bold;
+}
+
+.second_section {
+    display: flex;
+    align-items: center;
+}
+
+.secondsection_first,
+.secondsection_Second {
+    flex: 1;
+    padding: 2rem;
+    margin: 1rem 2rem;
+    text-align: center;
+    height: 11rem;
+    border-radius: 0.6rem;
+}
+
+.secondsection_first>h2,
+.secondsection_Second>h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.secondsection_first {
+    background-color: #deffde;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.secondsection_Second {
+    background-color: rgb(242, 227, 255);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.text_blue {
+    padding: 0.8rem;
+    background-color: #000C83;
+    color: white;
+    border-radius: 0.6rem;
+}
+
+.subflex_text>h4 {
+    margin: 0.25rem;
+}
+
+.secondsection_subflex {
+    display: flex;
+    align-items: center;
+}
+
+.subflex_icon,
+.subflex_text {
+    flex: 1;
+}
+
+.fourth_section {
+    /* margin: 1rem 2rem; */
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.fourth_section_heading,
+.fifth_section_heading {
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* margin: 0.8rem 0; */
+    color: #000C83;
+}
+
+.SelfCheck_slider {
+    display: flex;
+    overflow-x: scroll;
+    box-sizing: content-box;
+}
+
+.SelfCheck_slider::-webkit-scrollbar {
+    display: none;
+}
+
+.fifth_section {
+    /* margin: 1rem 2rem; */
+    padding: 2rem;
 }
