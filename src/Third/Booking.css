@@ -89,6 +89,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F5F5F5;
+    margin: 1rem 0;
+    border-radius: 0.8rem;
+    width: 20rem;
 }
 
 .appointmentOptions {
@@ -103,4 +107,27 @@
     border-radius: 0.3rem;
     padding: 0.2rem;
     margin: 0.5rem 1rem;
+}
+
+.appointmentSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.hideOptions {
+    display: none;
+}
+
+.activeOption {
+    background-color: rgb(96, 96, 247);
+    color: white;
+}
+
+.checkoutButton {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.6rem;
 }

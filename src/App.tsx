@@ -5,6 +5,7 @@ import Landingpage from "./First/Landingpage";
 import TestPakage from "./second/TestPakage";
 import Booking from "./Third/Booking";
 import Report from "./ReportsPage/Report";
+import OrderSummary from "./OrderSummary";
 import {
   BrowserRouter,
   Routes, //replaces "Switch" used till v5
@@ -21,6 +22,7 @@ function App() {
           <Route path="/MyReport" element={<Report />} />
           <Route path="/Booking" element={<Booking />} />
           <Route path="/TestPakage" element={<TestPakage />} />
+          <Route path="/onSummary" element={<OrderSummary />} />
         </Routes>
       </BrowserRouter>
     </div>
