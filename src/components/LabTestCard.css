@@ -1,8 +1,17 @@
 .labtest_card {
     margin: 1rem;
-    padding: 2rem 4rem;
-    background-color: #deffde;
+    padding: 1rem 2rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 0.6rem;
+}
+
+.labtest_card:nth-child(even) {
+    background-color: #deffde;
+
+}
+
+.labtest_card:nth-child(odd) {
+    background-color: #f3e4ff;
 
 }
 

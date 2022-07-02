@@ -8,18 +8,34 @@ import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SummarizeRoundedIcon from "@mui/icons-material/SummarizeRounded";
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
+import Logo from "../image/LabtinLogo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header_main">
-      <div className="header_logo">Labtin Logo</div>
+      <div className="header_logo">
+        <img src={Logo} alt="Logo" />
+      </div>
       <div className="header_menu">
         <div className="menuItems">
-          <HeaderOptions Icon={HomeSharp} Title={"Home"} />
-          <HeaderOptions Icon={CalendarMonthRoundedIcon} Title={"Bookings"} />
-          <HeaderOptions Icon={SummarizeRoundedIcon} Title={"My Report"} />
-          <HeaderOptions Icon={SupportAgentRoundedIcon} Title={"Support"} />
-          <HeaderOptions Icon={MenuRoundedIcon} Title={"Menu"} />
+          <Link to="/">
+            <HeaderOptions Icon={HomeSharp} Title={"Home"} />
+          </Link>
+          <Link to="/Booking">
+            <HeaderOptions Icon={CalendarMonthRoundedIcon} Title={"Bookings"} />
+          </Link>
+          <Link to="/MyReport">
+            <HeaderOptions Icon={SummarizeRoundedIcon} Title={"My Report"} />
+          </Link>
+          <Link to="/Support">
+            {" "}
+            <HeaderOptions Icon={SupportAgentRoundedIcon} Title={"Support"} />
+          </Link>
+          <Link to="/Menu">
+            {" "}
+            <HeaderOptions Icon={MenuRoundedIcon} Title={"Menu"} />
+          </Link>
         </div>
       </div>
       <div className="searchwithPrescreption">

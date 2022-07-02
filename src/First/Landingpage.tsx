@@ -110,6 +110,7 @@ const Landingpage = () => {
             currentPrice="250"
             diagnostics="2"
           />
+          {/* Needed Book Now Button in Pakages */}
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
