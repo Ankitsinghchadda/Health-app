@@ -3,13 +3,13 @@ import HeaderOptions from "./HeaderOptions";
 import "./Header.css";
 import { HomeSharp } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SummarizeRoundedIcon from "@mui/icons-material/SummarizeRounded";
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import Logo from "../image/LabtinLogo.png";
 import { Link } from "react-router-dom";
+import LeftDrawer from "./LeftDrawer";
 
 const Header = () => {
   return (
@@ -32,10 +32,7 @@ const Header = () => {
             {" "}
             <HeaderOptions Icon={SupportAgentRoundedIcon} Title={"Support"} />
           </Link>
-          <Link to="/Menu">
-            {" "}
-            <HeaderOptions Icon={MenuRoundedIcon} Title={"Menu"} />
-          </Link>
+          <LeftDrawer />
         </div>
       </div>
       <div className="searchwithPrescreption">

@@ -3,8 +3,14 @@ import "./LandingPage.css";
 import Slider from "../components/Slider";
 import CircleImage from "../components/CircleImage";
 import LabTestCards from "../components/LabTestCards";
+import { useNavigate } from "react-router-dom";
 
 const Landingpage = () => {
+  const navigate = useNavigate();
+
+  const navigateToIP = () => {
+    navigate("/TestPakage");
+  };
   return (
     <div>
       <div className="first_section">
@@ -25,7 +31,7 @@ const Landingpage = () => {
         </div>
       </div>
       <div className="second_section">
-        <div className="secondsection_first">
+        <div className="secondsection_first" onClick={navigateToIP}>
           <h2>Health Packages</h2>
           <div className="secondsection_subflex">
             <div className="subflex_icon">SVG</div>
@@ -37,7 +43,7 @@ const Landingpage = () => {
             </div>
           </div>
         </div>
-        <div className="secondsection_Second">
+        <div className="secondsection_Second" onClick={navigateToIP}>
           <h2>Health Scans and Imagings</h2>
           <div className="secondsection_subflex">
             <div className="subflex_icon">SVG</div>

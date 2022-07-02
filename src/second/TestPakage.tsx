@@ -13,30 +13,34 @@ export default function TestPakage() {
   const indivualData = Data.Individualdata;
   const pakageData = Data.PakagesData;
 
-  const individualTestDiv = indivualData.map((data) => {
+  const individualTestDiv = indivualData.map((data, index) => {
     return (
-      <LabTestCards
-        heading={data.heading}
-        requirement={data.requirement}
-        offPercentage={data.offPercentage}
-        description={data.description}
-        previousPrice={data.previousPrice}
-        currentPrice={data.currentPrice}
-        diagnostics={data.diagnostics}
-      />
+      <div key={data.heading + index}>
+        <LabTestCards
+          heading={data.heading}
+          requirement={data.requirement}
+          offPercentage={data.offPercentage}
+          description={data.description}
+          previousPrice={data.previousPrice}
+          currentPrice={data.currentPrice}
+          diagnostics={data.diagnostics}
+        />
+      </div>
     );
   });
-  const pakageTestDiv = pakageData.map((data) => {
+  const pakageTestDiv = pakageData.map((data, index) => {
     return (
-      <LabTestCards
-        heading={data.heading}
-        requirement={data.requirement}
-        offPercentage={data.offPercentage}
-        description={data.description}
-        previousPrice={data.previousPrice}
-        currentPrice={data.currentPrice}
-        diagnostics={data.diagnostics}
-      />
+      <div key={data.heading + index}>
+        <LabTestCards
+          heading={data.heading}
+          requirement={data.requirement}
+          offPercentage={data.offPercentage}
+          description={data.description}
+          previousPrice={data.previousPrice}
+          currentPrice={data.currentPrice}
+          diagnostics={data.diagnostics}
+        />
+      </div>
     );
   });
 

@@ -41,6 +41,7 @@
     text-align: center;
     height: 11rem;
     border-radius: 0.6rem;
+    cursor: pointer;
 }
 
 .secondsection_first>h2,

@@ -18,7 +18,7 @@ const Booking = () => {
             <Avatar
               alt="Logo"
               src={Logo}
-              sx={{ width: "4rem", height: "4rem" }}
+              sx={{ width: "4rem", height: "4rem", border: "1px solid black" }}
             />
             <h3>Logo</h3>
           </div>
