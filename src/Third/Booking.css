@@ -3,6 +3,7 @@
     margin: 1rem auto;
     padding: 2rem;
     background-color: #F5F5F5;
+    box-sizing: border-box;
 }
 
 .bookedFor {
@@ -130,4 +131,35 @@
     border: none;
     border-radius: 0.2rem;
     padding: 0.4rem 0.6rem;
+}
+
+
+
+@media (max-width:900px) {
+    .BookingFor_div {
+        width: 90%;
+    }
+
+
+    .bookedFor,
+    .pickUpLocation,
+    .selectBookingSlot {
+        width: 80%;
+    }
+}
+
+@media (max-width:500px) {
+    .BookingFor_div {
+        width: 100%;
+        padding: 2rem 0.5rem;
+    }
+
+
+    .bookedFor,
+    .pickUpLocation,
+    .selectBookingSlot {
+        width: 95%;
+    }
+
+
 }

@@ -31,3 +31,23 @@
     font-size: 0.8rem;
     color: #C9E5FE;
 }
+
+@media(max-width: 900px) {
+    .slider {
+        margin: 1rem;
+        padding: 2rem 3rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .slider {
+        margin: 0.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .slider {
+        font-size: 85%;
+    }
+}

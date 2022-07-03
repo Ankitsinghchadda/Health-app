@@ -75,6 +75,7 @@ const OrderSummary = () => {
         </div>
       </div>
       <Snackbar
+        sx={{ marginBottom: "5rem" }}
         anchorOrigin={{ vertical, horizontal }}
         open={true}
         onClose={handleClose}

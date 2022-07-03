@@ -11,6 +11,7 @@ import {
   Routes, //replaces "Switch" used till v5
   Route,
 } from "react-router-dom";
+import BottomNavigationElement from "./components/BottomNavigationElement";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/TestPakage" element={<TestPakage />} />
           <Route path="/onSummary" element={<OrderSummary />} />
         </Routes>
+        {<BottomNavigationElement />}
       </BrowserRouter>
     </div>
   );

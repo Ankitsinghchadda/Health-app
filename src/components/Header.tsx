@@ -14,9 +14,11 @@ import LeftDrawer from "./LeftDrawer";
 const Header = () => {
   return (
     <div className="header_main">
-      <div className="header_logo">
-        <img src={Logo} alt="Logo" />
-      </div>
+      <Link to="/">
+        <div className="header_logo">
+          <img src={Logo} alt="Logo" />
+        </div>
+      </Link>
       <div className="header_menu">
         <div className="menuItems">
           <Link to="/">

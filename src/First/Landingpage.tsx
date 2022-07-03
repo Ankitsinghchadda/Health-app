@@ -7,12 +7,14 @@ import { useNavigate } from "react-router-dom";
 
 const Landingpage = () => {
   const navigate = useNavigate();
+  const [value, setValue] = React.useState(0);
 
   const navigateToIP = () => {
     navigate("/TestPakage");
   };
+
   return (
-    <div>
+    <div className="landing_div">
       <div className="first_section">
         <div className="first_section_heading">
           <div>
@@ -72,7 +74,7 @@ const Landingpage = () => {
         <div className="fifth_section_heading">
           Most Commonly Booked Tests <button>see more</button>
         </div>
-        <div className="labtest_cards">
+        <div className="labtest_cards_list">
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
@@ -82,15 +84,7 @@ const Landingpage = () => {
             currentPrice="250"
             diagnostics="2"
           />
-          <LabTestCards
-            heading="Tyroid Profile"
-            requirement="10-12 Hr fasting is Required"
-            offPercentage="30"
-            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
-            previousPrice="699"
-            currentPrice="250"
-            diagnostics="2"
-          />
+
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
@@ -106,7 +100,7 @@ const Landingpage = () => {
         <div className="fifth_section_heading">
           Most Commonly Booked Pakages <button>see more</button>
         </div>
-        <div className="labtest_cards">
+        <div className="labtest_cards_list">
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"

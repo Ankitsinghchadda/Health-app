@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Booking.css";
 import Avatar from "@mui/material/Avatar";
 import Logo from "../image/LabtinLogo.png";
@@ -34,7 +34,7 @@ const Booking = () => {
       setState({ ...state, open: false });
   };
   const toggleOptionsV = (e: any) => {
-    if (e.target.parentElement.classList[0] == "appointmentSection") {
+    if (e.target.parentElement.classList[0] === "appointmentSection") {
       e.target.parentElement.nextSibling.classList.toggle("hideOptions");
     }
   };
@@ -169,6 +169,7 @@ const Booking = () => {
           </div>
         </div>
         <Snackbar
+          sx={{ marginBottom: "5rem" }}
           anchorOrigin={{ vertical, horizontal }}
           open={open}
           onClose={handleClose}
