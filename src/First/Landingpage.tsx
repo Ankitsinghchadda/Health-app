@@ -4,6 +4,16 @@ import Slider from "../components/Slider";
 import CircleImage from "../components/CircleImage";
 import LabTestCards from "../components/LabTestCards";
 import { useNavigate } from "react-router-dom";
+import FirstIconFirst from "../image/FreeSample.png";
+import FirstIconSecond from "../image/firstIcon-2.png";
+import FirstIconThird from "../image/firstIcon-3.png";
+import secondFirst from "../image/secondfirst.png";
+import secondIcon from "../image/secondsecond.png";
+import SFirstIcon from "../image/1.png";
+import SSecondIcon from "../image/2.png";
+import SThirdIcon from "../image/3.png";
+import SFourthIcon from "../image/4.png";
+import SFifthIcon from "../image/5.png";
 
 const Landingpage = () => {
   const navigate = useNavigate();
@@ -26,17 +36,23 @@ const Landingpage = () => {
             </h2>
           </div>
 
-          <button className="buttonStyle1">Book Now</button>
+          <button className="buttonStyle1">BOOK NOW</button>
         </div>
         <div className="iconWithLable">
-          <div className="Section_Icon"></div>
+          <div className="Section_Icon">
+            <img src={FirstIconFirst} alt="At Work Or AT Home" />
+            <img src={FirstIconSecond} alt="" />
+            <img src={FirstIconThird} alt="" />
+          </div>
         </div>
       </div>
       <div className="second_section">
         <div className="secondsection_first" onClick={navigateToIP}>
           <h2>Health Packages</h2>
           <div className="secondsection_subflex">
-            <div className="subflex_icon">SVG</div>
+            <div className="subflex_icon">
+              <img src={secondFirst} alt="" />
+            </div>
             <div className="subflex_text">
               <div className="text_blue">Upto 50% off</div>
               <h4>2000+ TESTS</h4>
@@ -46,9 +62,12 @@ const Landingpage = () => {
           </div>
         </div>
         <div className="secondsection_Second" onClick={navigateToIP}>
-          <h2>Health Scans and Imagings</h2>
+          <h2>Health Scans & Imagings</h2>
           <div className="secondsection_subflex">
-            <div className="subflex_icon">SVG</div>
+            <div className="subflex_icon">
+              {" "}
+              <img src={secondIcon} alt="" />
+            </div>
             <div className="subflex_text">
               <div className="text_blue">Upto 30% off</div>
               <h4>Advanced &</h4>
@@ -63,11 +82,11 @@ const Landingpage = () => {
       <div className="fourth_section">
         <div className="fourth_section_heading">Most Common Self Checks</div>
         <div className="SelfCheck_slider">
-          <CircleImage name="Brain" image="Image" />
-          <CircleImage name="Heart" image="Image" />
-          <CircleImage name="Lungs" image="Image" />
-          <CircleImage name="Kideny" image="Image" />
-          <CircleImage name="Liver" image="Image" />
+          <CircleImage name="Brain" image={SFifthIcon} />
+          <CircleImage name="Heart" image={SSecondIcon} />
+          <CircleImage name="Lungs" image={SThirdIcon} />
+          <CircleImage name="Kideny" image={SFourthIcon} />
+          <CircleImage name="Liver" image={SFifthIcon} />
         </div>
       </div>
       <div className="fifth_section">
@@ -84,16 +103,6 @@ const Landingpage = () => {
             currentPrice="250"
             diagnostics="2"
           />
-
-          <LabTestCards
-            heading="Tyroid Profile"
-            requirement="10-12 Hr fasting is Required"
-            offPercentage="30"
-            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
-            previousPrice="699"
-            currentPrice="250"
-            diagnostics="2"
-          />
         </div>
       </div>
       <div className="fifth_section">
@@ -101,16 +110,6 @@ const Landingpage = () => {
           Most Commonly Booked Pakages <button>see more</button>
         </div>
         <div className="labtest_cards_list">
-          <LabTestCards
-            heading="Tyroid Profile"
-            requirement="10-12 Hr fasting is Required"
-            offPercentage="30"
-            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
-            previousPrice="699"
-            currentPrice="250"
-            diagnostics="2"
-          />
-          {/* Needed Book Now Button in Pakages */}
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
