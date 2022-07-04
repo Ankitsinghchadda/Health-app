@@ -13,6 +13,10 @@ const Landingpage = () => {
     navigate("/TestPakage");
   };
 
+  const navigateToRadiology = () => {
+    navigate("/Radiology");
+  };
+
   return (
     <div className="landing_div">
       <div className="first_section">
@@ -45,7 +49,7 @@ const Landingpage = () => {
             </div>
           </div>
         </div>
-        <div className="secondsection_Second" onClick={navigateToIP}>
+        <div className="secondsection_Second" onClick={navigateToRadiology}>
           <h2>Health Scans and Imagings</h2>
           <div className="secondsection_subflex">
             <div className="subflex_icon">SVG</div>
