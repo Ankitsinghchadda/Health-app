@@ -2,10 +2,19 @@ import React from "react";
 import "./LandingPage.css";
 import Slider from "../components/Slider";
 import CircleImage from "../components/CircleImage";
+import LabTestCards from "../components/LabTestCards";
+import { useNavigate } from "react-router-dom";
 
 const Landingpage = () => {
+  const navigate = useNavigate();
+  const [value, setValue] = React.useState(0);
+
+  const navigateToIP = () => {
+    navigate("/TestPakage");
+  };
+
   return (
-    <div>
+    <div className="landing_div">
       <div className="first_section">
         <div className="first_section_heading">
           <div>
@@ -24,7 +33,7 @@ const Landingpage = () => {
         </div>
       </div>
       <div className="second_section">
-        <div className="secondsection_first">
+        <div className="secondsection_first" onClick={navigateToIP}>
           <h2>Health Packages</h2>
           <div className="secondsection_subflex">
             <div className="subflex_icon">SVG</div>
@@ -36,7 +45,7 @@ const Landingpage = () => {
             </div>
           </div>
         </div>
-        <div className="secondsection_Second">
+        <div className="secondsection_Second" onClick={navigateToIP}>
           <h2>Health Scans and Imagings</h2>
           <div className="secondsection_subflex">
             <div className="subflex_icon">SVG</div>
@@ -63,7 +72,54 @@ const Landingpage = () => {
       </div>
       <div className="fifth_section">
         <div className="fifth_section_heading">
-          Most Commonly Booked Test <button>see more</button>
+          Most Commonly Booked Tests <button>see more</button>
+        </div>
+        <div className="labtest_cards_list">
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including measuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+        </div>
+      </div>
+      <div className="fifth_section">
+        <div className="fifth_section_heading">
+          Most Commonly Booked Pakages <button>see more</button>
+        </div>
+        <div className="labtest_cards_list">
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
+          {/* Needed Book Now Button in Pakages */}
+          <LabTestCards
+            heading="Tyroid Profile"
+            requirement="10-12 Hr fasting is Required"
+            offPercentage="30"
+            description="Tyroid Profile Total, Including asfdjkaldsjflakdsf adsjfasjf dasdjfslmeasuring the levels of "
+            previousPrice="699"
+            currentPrice="250"
+            diagnostics="2"
+          />
         </div>
       </div>
     </div>

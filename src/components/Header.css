@@ -2,7 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 1rem 2rem;
+}
+
+.header_logo>img {
+    width: 10rem;
+    object-fit: contain;
 }
 
 
@@ -10,6 +16,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menuItems>a {
+    text-decoration: none;
 }
 
 .searchwithPrescreption {
@@ -37,6 +47,7 @@
     margin: 0.4rem;
     width: 90%;
     background-color: #E7EDFF;
+    padding: 0.5rem 0.5rem;
 }
 
 .searchbar_input:focus {
@@ -56,4 +67,41 @@
 
 .selectState>select:focus {
     outline: none;
+}
+
+@media(max-width : 900px) {
+    .header_main {
+        padding: 0.5rem;
+    }
+
+    .header_logo>img {
+        width: 8rem;
+        object-fit: contain;
+    }
+
+}
+
+@media(max-width : 550px) {
+    .header_menu {
+        display: none;
+    }
+
+    .searchwithPrescreption {
+        position: relative;
+    }
+
+    .selectState {
+        position: absolute;
+        top: -3rem;
+        right: 0;
+    }
+
+    .uploadPrescription>.header__options {
+        margin: 0;
+    }
+
+    .searchbar {
+        margin-right: 3rem;
+    }
+
 }

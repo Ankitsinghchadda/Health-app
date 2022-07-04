@@ -1,0 +1,22 @@
+.sidebar_menu {
+    padding-left: 2rem;
+    margin: 2rem 0;
+
+}
+
+.sidebar_menu>a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar_icons {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.icon_name {
+    margin-left: 1.5rem;
+}
