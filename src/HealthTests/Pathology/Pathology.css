@@ -1,0 +1,119 @@
+.pathology {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon_banner, .package_cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.package_cards {
+    padding-left: 30px;
+}
+
+.top_display {
+    border: 1px solid;
+    border-color: white;
+}
+
+.top_text, .package_display_heading {
+    padding-left: 30px;
+}
+
+.package_display_heading {
+    padding-top: 50px;
+}
+
+.pathology_banner {
+    display: flex;
+    gap: 15rem;
+    background-color: rgb(204, 243, 243);
+}
+
+.book_test_form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+   background-color: white;
+   padding: 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: 3px solid;
+   border-color: white;
+   border-radius: 2px;
+}
+
+.book_test_form > h2 {
+    text-align: center;
+}
+
+.book_test_form > label {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.book_test_form > input {
+    padding: 10px;
+}
+
+.book_test_form > fieldset {
+    border: 0px;
+}
+
+.book_test_form > select {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.book_test_form > button {
+    border: 1px solid var(--color-light);
+    background-color: red;
+    color: white;
+    height: 45px;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.banner_heading {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-left: 50px;
+}
+
+
+.LAB {
+    color: blue;
+    font-weight: bolder;
+}
+
+.TIN {
+    color: gray;
+    font-weight: bolder;
+}
+
+.LabTin {
+    display: flex;
+    font-size: 4rem;
+}
+
+.DPath {
+    font-size: 4rem;
+    color: red;
+}
+
+.modal_content {
+    padding-left: 20px;
+}
+
+.modal_content > h2 {
+    text-align: center;
+}
+
+.details > div {
+    display: flex;
+    align-items: baseline;
+}
