@@ -1,16 +1,32 @@
 import React from "react";
 import "./App.css";
-import Bookings from "./Bookings";
 import Header from "./components/Header";
 import Landingpage from "./First/Landingpage";
-import HealthPackagePage from "./HealthTests/HealthPackagePage";
-import Pathology from "./HealthTests/Pathology/Pathology";
-import Radiology from "./HealthTests/Radiology/Radiology";
+import TestPakage from "./second/TestPakage";
+import Booking from "./Third/Booking";
+import Report from "./ReportsPage/Report";
+import OrderSummary from "./OrderSummary";
+import {
+  BrowserRouter,
+  Routes, //replaces "Switch" used till v5
+  Route,
+} from "react-router-dom";
+import BottomNavigationElement from "./components/BottomNavigationElement";
 
 function App() {
   return (
     <div className="App">
-      {<Header />} <Radiology />
+      <BrowserRouter>
+        {<Header />}
+        <Routes>
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/MyReport" element={<Report />} />
+          <Route path="/Booking" element={<Booking />} />
+          <Route path="/TestPakage" element={<TestPakage />} />
+          <Route path="/onSummary" element={<OrderSummary />} />
+        </Routes>
+        {<BottomNavigationElement />}
+      </BrowserRouter>
     </div>
   );
 }
