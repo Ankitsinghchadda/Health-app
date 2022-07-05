@@ -66,12 +66,8 @@ const Landingpage = () => {
           </div>
         </div>
 
-        <div className="secondsection_Second" onClick={navigateToRadiology}>
-          <h2>Health Scans and Imagings</h2>
-
         <div className="secondsection_Second" onClick={navigateToIP}>
           <h2>Health Scans & Imagings</h2>
-        </div>
           <div className="secondsection_subflex">
             <div className="subflex_icon">
               {" "}

@@ -56,7 +56,6 @@ export default function TestPakage() {
             sx={{
               borderBottom: 1,
               borderColor: "divider",
-              // backgroundColor: "#F5F5F5",
               paddingTop: " 1rem",
             }}
           >

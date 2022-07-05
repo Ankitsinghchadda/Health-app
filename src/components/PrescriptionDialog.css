@@ -1,12 +1,14 @@
 .close_button {
   font-weight: bolder;
   cursor: pointer;
+
 }
 
 .heading_and_close {
   display: flex;
   background-color: whitesmoke;
   border-radius: 5px;
+  align-items: center;
 }
 
 .dialog_body {

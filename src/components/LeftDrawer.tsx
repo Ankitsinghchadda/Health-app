@@ -14,6 +14,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import LoginIcon from "@mui/icons-material/Login";
 import "./LeftDrawer.css";
 import { Link } from "react-router-dom";
+import Tick from "../image/21.png";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -46,7 +47,7 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <CircleImage image="" name="Surya Thambiereddy" />
+      <CircleImage image={Tick} name="Surya Thambiereddy" />
       <div className="sidebar_menu">
         <Link to="/">
           <div className="sidebar_icons">
