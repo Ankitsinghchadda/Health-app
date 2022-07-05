@@ -1,3 +1,9 @@
+.Summary_main {
+    background-color: #f5f5f5;
+    padding-bottom: 8rem;
+
+}
+
 .OrderSummary {
     width: 60%;
     margin: 1rem auto;
@@ -5,7 +11,6 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    background-color: white;
     border-radius: 0.6rem;
 }
 
@@ -25,7 +30,7 @@
     padding: 1rem;
     margin: 3rem 0;
     border-radius: 0.6rem;
-    background-color: #f5f5f5;
+    background-color: white;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 }
@@ -79,8 +84,8 @@
 }
 
 .round input[type="checkbox"]:checked+label {
-    background-color: #66bb6a;
-    border-color: #66bb6a;
+    background-color: #0EB6FF;
+    border-color: #0EB6FF;
 }
 
 .round input[type="checkbox"]:checked+label:after {
@@ -103,9 +108,14 @@
     color: rgb(74, 0, 153);
     display: flex;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: white;
     padding: 0 1rem;
     cursor: pointer;
+}
+
+.offers_div>img {
+    width: 5rem;
+    object-fit: contain;
 }
 
 
@@ -119,6 +129,11 @@
     .OrderSummary {
         width: 95%;
     }
+
+    .offers_div>img {
+        width: 4rem;
+        object-fit: contain;
+    }
 }
 
 @media (max-width:500px) {
@@ -126,4 +141,24 @@
         width: 95%;
         font-size: 80%;
     }
+
+    .OrderSummary {
+        padding-top: 4rem;
+    }
+
+    .OrderSummary>h1 {
+        margin-bottom: 3rem;
+    }
+
+    .offers_div>img {
+        width: 3rem;
+        object-fit: contain;
+    }
+
+    .offers_div>h2,
+    .hardcopy>span {
+        font-size: 1rem;
+    }
+
+
 }

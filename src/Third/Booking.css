@@ -4,6 +4,7 @@
     padding: 2rem;
     background-color: #F5F5F5;
     box-sizing: border-box;
+    padding-bottom: 8rem;
 }
 
 .bookedFor {
@@ -35,6 +36,7 @@
 .addedAvatar>h3 {
     font-size: 1.3rem;
     margin: 0;
+    font-weight: 600;
 }
 
 .addedAvatar,
@@ -63,6 +65,7 @@
 
 }
 
+
 .iconLoaction>p {
     font-size: 1rem;
     margin: 0;
@@ -80,9 +83,12 @@
 }
 
 .appointmentDate {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     border-radius: 0.5rem;
+    border: none;
+    background-color: #0EB6FF;
+    color: white;
     padding: 0.5rem 1rem;
 }
 
@@ -123,7 +129,8 @@
 }
 
 .activeOption {
-    background-color: rgb(96, 96, 247);
+    background-color: #0EB6FF;
+    border: 1px solid white;
     color: white;
 }
 
@@ -146,12 +153,24 @@
     .selectBookingSlot {
         width: 80%;
     }
+
+    .appointmentSection>h4 {
+        font-size: 1rem;
+    }
+
+    .selectBookingSlot>h3,
+    .bookedFor>h3,
+    .pickUpLocation>h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 }
 
 @media (max-width:500px) {
     .BookingFor_div {
-        width: 100%;
-        padding: 2rem 0.5rem;
+        width: 95%;
+        padding: 1rem 0.5rem;
+        padding-bottom: 8rem;
     }
 
 
@@ -160,6 +179,8 @@
     .selectBookingSlot {
         width: 95%;
     }
+
+
 
 
 }

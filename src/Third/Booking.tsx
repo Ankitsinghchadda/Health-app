@@ -116,7 +116,7 @@ const Booking = () => {
             <h4>
               Morning <span>(6:00 AM - 12:00 PM)</span>
             </h4>
-            <ArrowDropDownIcon className="downArrow" />
+            <ArrowDropDownIcon className="downArrow" fontSize="large" />
           </div>
           <div className="appointmentOptions hideOptions">
             <div className="appointmentOption" onClick={handleAppointment}>
@@ -144,7 +144,7 @@ const Booking = () => {
             <h4>
               Afternoon <span>(12:00 PM-2:00PM)</span>
             </h4>
-            <ArrowDropDownIcon />
+            <ArrowDropDownIcon fontSize="large" />
           </div>
 
           <div className="appointmentOptions hideOptions">

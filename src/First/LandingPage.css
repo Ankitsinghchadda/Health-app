@@ -4,7 +4,7 @@
 
 .first_section {
     background-color: #0EB6FF;
-    padding: 4rem 5rem;
+    padding: 2rem 5rem;
     margin: 1rem 2rem;
     border-radius: 0.8rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -21,10 +21,22 @@
     margin: 0;
 }
 
+.Section_Icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+.Section_Icon>img {
+    width: 15rem;
+    object-fit: contain;
+}
+
 .buttonStyle1 {
     font-size: 1rem;
     border: none;
-    border-radius: 0.6rem;
+    border-radius: 0.4rem;
     padding: 1.2rem 1.5rem;
     background-color: #000C83;
     color: white;
@@ -55,12 +67,17 @@
 }
 
 .secondsection_first {
-    background-color: #deffde;
+    background-color: #F3FFF3;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+.subflex_icon>img {
+    height: 8rem;
+    object-fit: contain;
+}
+
 .secondsection_Second {
-    background-color: rgb(242, 227, 255);
+    background-color: #FAF4FF;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -190,6 +207,11 @@
         padding: 0.5rem;
     }
 
+    .Section_Icon>img {
+        width: 10rem;
+        object-fit: contain;
+    }
+
 }
 
 @media(max-width:700px) {
@@ -212,6 +234,17 @@
     .bottomNavigation {
         display: block;
     }
+
+    .Section_Icon>img {
+        width: 8rem;
+        object-fit: contain;
+    }
+
+    .subflex_icon>img {
+        height: 6rem;
+        object-fit: contain;
+    }
+
 }
 
 
@@ -219,7 +252,8 @@
 
     .secondsection_first,
     .secondsection_Second {
-        font-size: 75%;
+        font-size: 65%;
+        height: 10rem;
     }
 
     .subflex_text>h4 {
@@ -227,18 +261,39 @@
     }
 
     .buttonStyle1 {
-        padding: 0.8rem 1rem;
+        padding: 0.8rem 0.5rem;
         font-size: 1rem;
     }
 
     .first_section {
-        padding: 1rem 2rem;
+        padding: 1rem;
     }
 
     .bottomDrawer {
         margin-top: 0.5rem;
     }
 
+    .Section_Icon>img {
+        width: 7.5rem;
+        object-fit: contain;
+    }
+
+    .headingfirst {
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+
+    .fifth_section_heading,
+    .fourth_section_heading {
+        font-size: 1.2rem;
+    }
 
 
+}
+
+@media(max-width:400px) {
+    .Section_Icon>img {
+        width: 6.5rem;
+        object-fit: contain;
+    }
 }
