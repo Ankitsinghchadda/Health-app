@@ -12,6 +12,8 @@ import {
   Route,
 } from "react-router-dom";
 import BottomNavigationElement from "./components/BottomNavigationElement";
+import Radiology from "./HealthTests/Radiology/Radiology";
+import PrescriptionDialog from "./components/PrescriptionDialog";
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           <Route path="/Booking" element={<Booking />} />
           <Route path="/TestPakage" element={<TestPakage />} />
           <Route path="/onSummary" element={<OrderSummary />} />
+          <Route path="/Radiology" element={<Radiology />} />
         </Routes>
         {<BottomNavigationElement />}
       </BrowserRouter>

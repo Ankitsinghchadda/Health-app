@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderOptions from "./HeaderOptions";
 import "./Header.css";
 import { HomeSharp } from "@mui/icons-material";
@@ -10,10 +10,16 @@ import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import Logo from "../image/LabtinLogo.png";
 import { Link } from "react-router-dom";
 import LeftDrawer from "./LeftDrawer";
+import { Modal } from "@mui/material";
+import PrescriptionDialog from "./PrescriptionDialog";
 
 const Header = () => {
+  const [show, setShow] = useState(false);
   return (
     <div className="header_main">
+      <PrescriptionDialog visibility = {show} onClose={async() => {
+        setShow(false);
+      }} />
       <Link to="/">
         <div className="header_logo">
           <img src={Logo} alt="Logo" />
@@ -46,7 +52,9 @@ const Header = () => {
           />
           <SearchIcon className="searchbar_icon" fontSize="medium" />
         </div>
-        <div className="uploadPrescription">
+        <div className="uploadPrescription" onClick={async() => {
+           setShow(true);
+        }}>
           <HeaderOptions Icon={NoteAddRoundedIcon} Title={"Prescription"} />
         </div>
 
