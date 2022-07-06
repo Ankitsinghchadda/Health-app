@@ -1,12 +1,14 @@
 .landing_div {
     margin-bottom: 5rem;
+    background-color: #F5F5F5;
+    padding-top: 0.5rem;
 }
 
 .first_section {
     background-color: #0EB6FF;
     padding: 2rem 5rem;
     margin: 1rem 2rem;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 }
@@ -37,10 +39,10 @@
     font-size: 1rem;
     border: none;
     border-radius: 0.4rem;
-    padding: 1.2rem 1.5rem;
+    padding: 1.2rem 1.3rem;
     background-color: #000C83;
     color: white;
-    font-weight: bold;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -56,7 +58,7 @@
     margin: 1rem 2rem;
     text-align: center;
     height: 11rem;
-    border-radius: 0.6rem;
+    border-radius: 0.4rem;
     cursor: pointer;
 }
 
@@ -85,7 +87,6 @@
     padding: 0.8rem;
     background-color: #000C83;
     color: white;
-    border-radius: 0.6rem;
 }
 
 .subflex_text>h4 {
@@ -145,7 +146,6 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* flex-direction: column; */
 }
 
 .bottomNavigation {
@@ -241,8 +241,31 @@
     }
 
     .subflex_icon>img {
-        height: 6rem;
+        height: 5rem;
         object-fit: contain;
+    }
+
+    .text_blue {
+        padding: 0.2rem;
+    }
+
+    .secondsection_first>h2,
+    .secondsection_Second>h2 {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .subflex_text {
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+
+    .labtest_cards_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
 }
@@ -253,7 +276,7 @@
     .secondsection_first,
     .secondsection_Second {
         font-size: 65%;
-        height: 10rem;
+        height: 6.5rem;
     }
 
     .subflex_text>h4 {
@@ -261,8 +284,8 @@
     }
 
     .buttonStyle1 {
-        padding: 0.8rem 0.5rem;
-        font-size: 1rem;
+        padding: 0.6rem 0.5rem;
+        font-size: 0.9rem;
     }
 
     .first_section {
@@ -285,7 +308,7 @@
 
     .fifth_section_heading,
     .fourth_section_heading {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
 

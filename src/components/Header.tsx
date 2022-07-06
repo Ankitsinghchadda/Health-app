@@ -17,9 +17,12 @@ const Header = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="header_main">
-      <PrescriptionDialog visibility = {show} onClose={async() => {
-        setShow(false);
-      }} />
+      <PrescriptionDialog
+        visibility={show}
+        onClose={async () => {
+          setShow(false);
+        }}
+      />
       <Link to="/">
         <div className="header_logo">
           <img src={Logo} alt="Logo" />
@@ -48,14 +51,18 @@ const Header = () => {
           <input
             className="searchbar_input"
             type="text"
-            placeholder="Search Lab Test Eg: Tyroid, CBD, Liq..."
+            placeholder="Search Lab Test Eg: Tyroid, CBD, Liqid..."
           />
           <SearchIcon className="searchbar_icon" fontSize="medium" />
         </div>
-        <div className="uploadPrescription" onClick={async() => {
-           setShow(true);
-        }}>
+        <div
+          className="uploadPrescription"
+          onClick={async () => {
+            setShow(true);
+          }}
+        >
           <HeaderOptions Icon={NoteAddRoundedIcon} Title={"Prescription"} />
+          {/* <NoteAddRoundedIcon fontSize="large" /> */}
         </div>
 
         <div className="selectState">
