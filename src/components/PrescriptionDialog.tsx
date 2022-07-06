@@ -1,12 +1,17 @@
-import { BrowseGallery, Camera, CameraAlt, Close, Collections } from '@mui/icons-material'
-import React, { useState } from 'react'
-import './PrescriptionDialog.css';
-import camera from '../image/camera.png';
-import gallery from '../image/gallery.png';
+import {
+  BrowseGallery,
+  Camera,
+  CameraAlt,
+  Close,
+  Collections,
+} from "@mui/icons-material";
 
+import React, { useState } from "react";
+import "./PrescriptionDialog.css";
+import camera from "../image/camera.png";
+import gallery from "../image/gallery.png";
 
 function PrescriptionDialog(props: any) {
-   if ( !props.visibility ) {
      return (
        null
      )
@@ -56,5 +61,3 @@ function PrescriptionDialog(props: any) {
     </div>
   )
 }
-
-export default PrescriptionDialog

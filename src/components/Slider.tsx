@@ -1,5 +1,6 @@
 import React from "react";
 import "./Slider.css";
+import DocImg from "../image/image.png";
 
 const Slider = () => {
   return (
@@ -14,7 +15,9 @@ const Slider = () => {
           </p>
         </div>
       </div>
-      <div className="slider_image">Image</div>
+      <div className="slider_image">
+        <img src={DocImg} alt="" />
+      </div>
     </div>
   );
 };

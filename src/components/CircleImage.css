@@ -5,12 +5,13 @@
     margin: 0.5rem 2rem;
 }
 
-.selfCheck_circle {
+.selfCheck_circle>img {
     height: 8rem;
     width: 8rem;
     border-radius: 50%;
-    background-color: #8EB9D3;
+    background-color: #e7f3fb;
     text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     padding: 0.5rem;
 }
 
@@ -26,8 +27,15 @@
 }
 
 @media (max-width: 700px) {
-    .selfCheck_circle {
+    .selfCheck_circle>img {
         height: 5rem;
         width: 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .selfCheck_circle>img {
+        height: 4rem;
+        width: 4rem;
     }
 }
