@@ -9,7 +9,6 @@ function Radiology() {
 
   return (
     <div className='radiology'>
-      <div className='heading_radiology'>Radiology</div>
       <div className='radiology_cards'>
       {
         [1,2,3,4,5].map(() => {

@@ -17,7 +17,8 @@ const Header = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="header_main">
-      <PrescriptionDialog visibility = {show} onClose={async() => {
+      <PrescriptionDialog className="mymodal"
+        overlayClassName="myoverlay" visibility = {show} onClose={async() => {
         setShow(false);
       }} />
       <Link to="/">

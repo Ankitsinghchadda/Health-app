@@ -11,7 +11,9 @@ function PrescriptionDialog(props: any) {
        null
      )
    }
+   
   return (
+    <div className='my_modal'>
     <div className='dialog_body'>
     <div>
     <div className='heading_and_close'>
@@ -51,6 +53,7 @@ function PrescriptionDialog(props: any) {
    </div>
     </div>
     </div>    
+    </div>
   )
 }
 
