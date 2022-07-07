@@ -17,12 +17,19 @@ const Header = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="header_main">
+
+      <PrescriptionDialog className="mymodal"
+        overlayClassName="myoverlay" visibility = {show} onClose={async() => {
+        setShow(false);
+      }} />
+
       <PrescriptionDialog
         visibility={show}
         onClose={async () => {
           setShow(false);
         }}
       />
+
       <Link to="/">
         <div className="header_logo">
           <img src={Logo} alt="Logo" />
