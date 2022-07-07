@@ -1,5 +1,6 @@
 .testpakages {
     margin-bottom: 5rem;
+    /* background-color: #F5F5F5; */
 }
 
 .labtest_cards {
@@ -15,6 +16,7 @@
     font-weight: bold;
     margin: 0 4rem;
 }
+
 
 @media (max-width:1200px) {
     .labtest_cards {
@@ -36,7 +38,7 @@
     .indiTan {
         font-size: 1.2rem;
         font-weight: bolder;
-        margin: 0 1.5rem;
+        margin: 0 0.5rem;
     }
 }
 
@@ -45,6 +47,5 @@
     .indiTan {
         font-size: 1rem;
         font-weight: bolder;
-        margin: 0 1.5rem;
     }
 }

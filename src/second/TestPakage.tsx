@@ -46,6 +46,7 @@ export default function TestPakage() {
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+    console.log(event);
   };
 
   return (
@@ -61,35 +62,44 @@ export default function TestPakage() {
           >
             <div className="indiTan">
               <TabList
+                sx={{ display: "flex", alignItems: "center" }}
                 onChange={handleChange}
                 aria-label="lab API tabs example"
               >
-                {" "}
                 <Tab
                   label="Individual Tests"
                   value="1"
                   sx={{
+                    flex: 1,
                     fontSize: "inherit",
                     fontWeight: "inherit",
                     margin: "inherit",
+                    padding: 0,
+                    textTransform: "none",
                   }}
                 />
                 <Tab
                   label="Pakages"
                   value="2"
                   sx={{
+                    flex: 1,
                     fontSize: "inherit",
                     fontWeight: "inherit",
                     margin: "inherit",
+                    padding: 0,
+                    textTransform: "none",
                   }}
                 />
               </TabList>
             </div>
           </Box>
-          <TabPanel value="1" sx={{ margin: "0 1rem" }}>
+          <TabPanel
+            value="1"
+            sx={{ padding: " 0rem", backgroundColor: "white" }}
+          >
             <div className="labtest_cards">{individualTestDiv}</div>
           </TabPanel>
-          <TabPanel value="2" sx={{ margin: "0 1rem" }}>
+          <TabPanel value="2" sx={{ padding: " 0rem" }}>
             <div className="labtest_cards"> {pakageTestDiv} </div>
           </TabPanel>
         </TabContext>

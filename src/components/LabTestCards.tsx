@@ -16,10 +16,12 @@ const LabTestCards = (props: any) => {
         </div>
         <div className="card_price">
           <h3>Starts From</h3>
-          <span style={{ color: "red", textDecoration: "line-through" }}>
-            ₹{props.previousPrice}
-          </span>
-          <span> ₹{props.currentPrice}</span>
+          <div>
+            <span style={{ color: "red", textDecoration: "line-through" }}>
+              ₹{props.previousPrice}
+            </span>
+            <span> ₹{props.currentPrice}</span>
+          </div>
           <br />
           <button className="labtest_addButton">Add</button>
         </div>
