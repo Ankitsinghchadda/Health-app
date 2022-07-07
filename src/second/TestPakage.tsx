@@ -58,15 +58,18 @@ export default function TestPakage() {
               borderBottom: 1,
               borderColor: "divider",
               paddingTop: " 1rem",
+              backgroundColor: "#F5F5F5",
             }}
           >
             <div className="indiTan">
               <TabList
+                className="tablist_all"
                 sx={{ display: "flex", alignItems: "center" }}
                 onChange={handleChange}
                 aria-label="lab API tabs example"
               >
                 <Tab
+                  className="tab_one"
                   label="Individual Tests"
                   value="1"
                   sx={{
@@ -79,6 +82,7 @@ export default function TestPakage() {
                   }}
                 />
                 <Tab
+                  className="tab_one"
                   label="Pakages"
                   value="2"
                   sx={{
@@ -93,10 +97,7 @@ export default function TestPakage() {
               </TabList>
             </div>
           </Box>
-          <TabPanel
-            value="1"
-            sx={{ padding: " 0rem", backgroundColor: "white" }}
-          >
+          <TabPanel value="1" sx={{ padding: " 0rem" }}>
             <div className="labtest_cards">{individualTestDiv}</div>
           </TabPanel>
           <TabPanel value="2" sx={{ padding: " 0rem" }}>

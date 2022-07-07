@@ -17,6 +17,10 @@
     margin: 0 4rem;
 }
 
+.tablist_all.tab_one:hover {
+    background-color: white;
+}
+
 
 @media (max-width:1200px) {
     .labtest_cards {
