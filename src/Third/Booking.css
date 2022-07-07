@@ -12,7 +12,7 @@
     margin: 1rem auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 1rem;
     background-color: white;
     border-radius: 0.6rem;
@@ -26,7 +26,6 @@
 .avatars {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     min-width: 12rem;
 }
 
@@ -44,19 +43,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 1rem;
 }
 
 .iconLoaction {
     text-align: center;
-    font-size: 4rem;
+    font-style: italic;
+    font-size: 3.5rem;
     color: #000C83;
 }
 
-.pickUpLocation,
-.selectBookingSlot {
+.pickUpLocation {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 1rem;
     margin: 1rem auto;
     width: 60%;
@@ -65,6 +65,19 @@
 
 }
 
+.selectBookingSlot {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 60%;
+    border-radius: 0.6rem;
+    background-color: white;
+}
+
+.selectBookingSlot_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .iconLoaction>p {
     font-size: 1rem;
@@ -140,6 +153,9 @@
     padding: 0.4rem 0.6rem;
 }
 
+.rotate {
+    transform: rotate(180deg);
+}
 
 
 @media (max-width:900px) {
@@ -155,7 +171,7 @@
     }
 
     .appointmentSection>h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .selectBookingSlot>h3,
@@ -168,7 +184,7 @@
 
 @media (max-width:500px) {
     .BookingFor_div {
-        width: 95%;
+        width: 98%;
         padding: 1rem 0.5rem;
         padding-bottom: 8rem;
     }
@@ -178,6 +194,30 @@
     .pickUpLocation,
     .selectBookingSlot {
         width: 95%;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .selectBookingSlot>h3,
+    .bookedFor>h3,
+    .pickUpLocation>h3 {
+        margin: 0;
+        margin-bottom: 0.6rem;
+        text-align: left;
+        padding: 0.2rem 0.5rem;
+        font-weight: 500;
+
+    }
+
+    .add_beforeAvtar>h3,
+    .addedAvatar>h3 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .add_beforeAvtar {
+        font-size: 4.5rem;
     }
 
 
