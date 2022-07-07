@@ -17,9 +17,9 @@
     margin: 0 4rem;
 }
 
-.tablist_all.tab_one:hover {
-    background-color: white;
-}
+/* .tablist_all.tab_one:hover {
+    background-color: black;
+} */
 
 
 @media (max-width:1200px) {

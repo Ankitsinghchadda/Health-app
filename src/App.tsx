@@ -14,6 +14,7 @@ import {
 import BottomNavigationElement from "./components/BottomNavigationElement";
 import Radiology from "./HealthTests/Radiology/Radiology";
 import PrescriptionDialog from "./components/PrescriptionDialog";
+import PakagesTab from "./second/PakagesTab";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path="/" element={<Landingpage />} />
           <Route path="/MyReport" element={<Report />} />
           <Route path="/Booking" element={<Booking />} />
-          <Route path="/TestPakage" element={<TestPakage />} />
+          <Route path="/TestPakage" element={<PakagesTab />} />
           <Route path="/onSummary" element={<OrderSummary />} />
           <Route path="/Radiology" element={<Radiology />} />
         </Routes>

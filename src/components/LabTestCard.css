@@ -1,8 +1,12 @@
 .labtest_card {
     margin: 1rem;
     padding: 1rem 2rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
     border-radius: 0.4rem;
+}
+
+.labtest_card:first-child {
+    margin-top: 0;
 }
 
 .labtest_card:nth-child(even) {
