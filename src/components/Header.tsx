@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeaderOptions from "./HeaderOptions";
 import "./Header.css";
 import { HomeSharp } from "@mui/icons-material";
-import SearchIcon from "@mui/icons-material/Search";
+import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SummarizeRoundedIcon from "@mui/icons-material/SummarizeRounded";
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
@@ -17,11 +17,14 @@ const Header = () => {
   const [show, setShow] = useState(false);
   return (
     <div className="header_main">
-
-      <PrescriptionDialog className="mymodal"
-        overlayClassName="myoverlay" visibility = {show} onClose={async() => {
-        setShow(false);
-      }} />
+      <PrescriptionDialog
+        className="mymodal"
+        overlayClassName="myoverlay"
+        visibility={show}
+        onClose={async () => {
+          setShow(false);
+        }}
+      />
 
       <PrescriptionDialog
         visibility={show}
@@ -60,7 +63,13 @@ const Header = () => {
             type="text"
             placeholder="Search Lab Test Eg: Tyroid, CBD, Liqid..."
           />
-          <SearchIcon className="searchbar_icon" fontSize="medium" />
+          <div className="searchIcon">
+            <SearchTwoToneIcon
+              className="searchbar_icon"
+              fontSize="inherit"
+              color="inherit"
+            />
+          </div>
         </div>
         <div
           className="uploadPrescription"
@@ -68,8 +77,8 @@ const Header = () => {
             setShow(true);
           }}
         >
-          <HeaderOptions Icon={NoteAddRoundedIcon} Title={"Prescription"} />
-          {/* <NoteAddRoundedIcon fontSize="large" /> */}
+          {/* <HeaderOptions Icon={NoteAddRoundedIcon} Title={"Prescription"} /> */}
+          <NoteAddRoundedIcon fontSize="large" />
         </div>
 
         <div className="selectState">

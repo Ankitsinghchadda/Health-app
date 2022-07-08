@@ -34,6 +34,7 @@
 
 
 .searchbar {
+    width: 100%;
     display: flex;
     align-items: center;
     border: 1px solid rgb(181, 181, 181);
@@ -62,6 +63,16 @@
     outline: none;
 }
 
+.searchbar_input::placeholder {
+    color: grey;
+}
+
+.searchIcon {
+    font-size: 1.8rem;
+    padding-top: 0.2rem;
+    color: grey;
+}
+
 .uploadPrescription {
     padding: 0.25rem;
 }
@@ -83,7 +94,7 @@
     }
 
     .header_logo>img {
-        width: 8rem;
+        width: 8.5rem;
         object-fit: contain;
     }
 
@@ -115,11 +126,15 @@
     }
 
     .searchbar {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
     }
 
     .selectState>select {
         font-size: 0.8rem;
+    }
+
+    .searchbar_input {
+        font-size: 0.9rem;
     }
 
 }
