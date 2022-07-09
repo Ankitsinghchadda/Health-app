@@ -1,16 +1,21 @@
 .landing_div {
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
     background-color: #F5F5F5;
     padding-top: 0.5rem;
 }
 
+.firstForDesktop {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
 .first_section {
     background-color: #0EB6FF;
-    padding: 2rem 5rem;
-    margin: 1rem 2rem;
+    padding: 2rem 2.5rem;
+    margin: 0.5rem 1rem;
     border-radius: 0.4rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
 }
 
 .first_section_heading {
@@ -19,9 +24,12 @@
     align-items: center;
 }
 
+
 .headingfirst {
     margin: 0;
+    font-size: 2rem;
 }
+
 
 .Section_Icon {
     display: flex;
@@ -31,35 +39,52 @@
 }
 
 .Section_Icon>img {
-    width: 15rem;
+    width: 12rem;
     object-fit: contain;
 }
 
 .buttonStyle1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     border: none;
     border-radius: 0.4rem;
-    padding: 1.2rem 1.3rem;
+    padding: 0.8rem 0.6rem;
     background-color: #000C83;
     color: white;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
 }
 
 .second_section {
-    display: flex;
+    display: grid;
+    grid-template-rows: auto auto;
     align-items: center;
 }
 
 .secondsection_first,
 .secondsection_Second {
     flex: 1;
-    padding: 2rem;
-    margin: 1rem 2rem;
+    padding: 0.25rem;
+    margin: 0.5rem 1rem;
     text-align: center;
-    height: 11rem;
+    /* height: 11rem; */
     border-radius: 0.4rem;
     cursor: pointer;
+    position: relative;
+}
+
+.text_blue.desktopElement {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 0.4rem;
+
+
+}
+
+.subflex_text>h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin: 0.5rem 0;
 }
 
 .secondsection_first>h2,
@@ -74,7 +99,7 @@
 }
 
 .subflex_icon>img {
-    height: 8rem;
+    height: 7rem;
     object-fit: contain;
 }
 
@@ -84,13 +109,15 @@
 }
 
 .text_blue {
-    padding: 0.8rem;
+    padding: 0.4rem;
+    font-size: 0.8rem;
     background-color: #000C83;
     color: white;
 }
 
 .subflex_text>h4 {
-    margin: 0.25rem;
+    margin: 0rem;
+    font-weight: 500;
 }
 
 .secondsection_subflex {
@@ -98,10 +125,15 @@
     align-items: center;
 }
 
-.subflex_icon,
-.subflex_text {
+.subflex_icon {
     flex: 1;
 }
+
+.subflex_text {
+    flex: 3;
+}
+
+
 
 .fourth_section {
     /* margin: 1rem 2rem; */
@@ -152,7 +184,36 @@
     display: none;
 }
 
+.mobileElement {
+    display: none;
+}
+
+.desktopElement {
+    display: block;
+}
+
 @media(max-width: 900px) {
+    .firstForDesktop {
+        display: block;
+    }
+
+    .desktopElement {
+        display: none;
+    }
+
+    .labtest_cards_list.desktopElement {
+        display: none;
+    }
+
+    .mobileElement {
+        display: block;
+    }
+
+    .second_section {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
 
     .secondsection_first,
     .first_section,

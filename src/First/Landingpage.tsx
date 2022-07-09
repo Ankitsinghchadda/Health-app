@@ -15,6 +15,8 @@ import SThirdIcon from "../image/3.png";
 import SFourthIcon from "../image/4.png";
 import SFifthIcon from "../image/5.png";
 import InSlider from "../components/InSlider";
+import Crousel from "../components/Crousels/Crousel";
+import MobileCrousel from "../components/Crousels/MobileCrousel";
 
 const Landingpage = () => {
   const navigate = useNavigate();
@@ -30,59 +32,69 @@ const Landingpage = () => {
 
   return (
     <div className="landing_div">
-      <div className="first_section">
-        <div className="first_section_heading">
-          <div>
-            <h2 className="headingfirst" style={{ color: "#000C83" }}>
-              Get Sample Collected,{" "}
-            </h2>
-            <h2 className="headingfirst" style={{ color: "white" }}>
-              In just 45 MINUTES
-            </h2>
+      <div className="firstForDesktop">
+        <div className="first_section">
+          <div className="first_section_heading">
+            <div>
+              <h2 className="headingfirst" style={{ color: "#000C83" }}>
+                Get Sample Collected,{" "}
+              </h2>
+              <h2 className="headingfirst" style={{ color: "white" }}>
+                In just 45 <span style={{ fontStyle: "italic" }}>MINUTES</span>
+              </h2>
+            </div>
+
+            <button className="buttonStyle1">BOOK NOW</button>
+          </div>
+          <div className="iconWithLable">
+            <div className="Section_Icon">
+              <img src={FirstIconFirst} alt="At Work Or AT Home" />
+              <img src={FirstIconSecond} alt="" />
+              <img src={FirstIconThird} alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="second_section">
+          <div className="secondsection_first" onClick={navigateToIP}>
+            <h2 className="mobileElement">Health Packages</h2>
+            <div className="text_blue desktopElement">Upto 50% off</div>
+
+            <div className="secondsection_subflex">
+              <div className="subflex_icon">
+                <img src={secondFirst} alt="" />
+              </div>
+              <div className="subflex_text">
+                <h2 className="desktopElement">Health Packages</h2>
+                <div className="text_blue mobileElement">Upto 50% off</div>
+                <h4>2000+ TESTS</h4>
+                <h4>NABL & ICMR</h4>
+                <h4>APPROVED LABS</h4>
+              </div>
+            </div>
           </div>
 
-          <button className="buttonStyle1">BOOK NOW</button>
-        </div>
-        <div className="iconWithLable">
-          <div className="Section_Icon">
-            <img src={FirstIconFirst} alt="At Work Or AT Home" />
-            <img src={FirstIconSecond} alt="" />
-            <img src={FirstIconThird} alt="" />
+          <div className="secondsection_Second" onClick={navigateToIP}>
+            <h2 className="mobileElement">Health Scans & Imagings</h2>
+            <div className="text_blue desktopElement">Upto 30% off</div>
+            <div className="secondsection_subflex">
+              <div className="subflex_icon">
+                {" "}
+                <img src={secondIcon} alt="" />
+              </div>
+              <div className="subflex_text">
+                <h2 className="desktopElement">Health Scans & Imagings</h2>
+                <div className="text_blue mobileElement">Upto 30% off</div>
+                <h4>Advanced &</h4>
+                <h4>Affordable Radiology</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="second_section">
-        <div className="secondsection_first" onClick={navigateToIP}>
-          <h2>Health Packages</h2>
-          <div className="secondsection_subflex">
-            <div className="subflex_icon">
-              <img src={secondFirst} alt="" />
-            </div>
-            <div className="subflex_text">
-              <div className="text_blue">Upto 50% off</div>
-              <h4>2000+ TESTS</h4>
-              <h4>NABL & ICMR</h4>
-              <h4>APPROVED LABS</h4>
-            </div>
-          </div>
-        </div>
-
-        <div className="secondsection_Second" onClick={navigateToIP}>
-          <h2>Health Scans & Imagings</h2>
-          <div className="secondsection_subflex">
-            <div className="subflex_icon">
-              {" "}
-              <img src={secondIcon} alt="" />
-            </div>
-            <div className="subflex_text">
-              <div className="text_blue">Upto 30% off</div>
-              <h4>Advanced &</h4>
-              <h4>Affordable Radiology</h4>
-            </div>
-          </div>
-        </div>
+      <div className="third_section mobileElement">
+        <MobileCrousel />
       </div>
-      <div className="third_section">
+      <div className="third_section desktopElement">
         <InSlider />
       </div>
 
@@ -94,13 +106,18 @@ const Landingpage = () => {
           <CircleImage name="Lungs" image={SThirdIcon} />
           <CircleImage name="Kideny" image={SFourthIcon} />
           <CircleImage name="Liver" image={SFifthIcon} />
+          <CircleImage name="Heart" image={SSecondIcon} />
+          <CircleImage name="Lungs" image={SThirdIcon} />
         </div>
       </div>
       <div className="fifth_section">
         <div className="fifth_section_heading">
           Most Commonly Booked Tests <button>see more</button>
         </div>
-        <div className="labtest_cards_list">
+        <div className="labtest_cards_list desktopElement">
+          <Crousel crousalData="Tests" />
+        </div>
+        <div className="labtest_cards_list mobileElement">
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
@@ -125,7 +142,10 @@ const Landingpage = () => {
         <div className="fifth_section_heading">
           Most Commonly Booked Pakages <button>see more</button>
         </div>
-        <div className="labtest_cards_list">
+        <div className="labtest_cards_list desktopElement">
+          <Crousel crousalData="pakages" />
+        </div>
+        <div className="labtest_cards_list mobileElement">
           <LabTestCards
             heading="Tyroid Profile"
             requirement="10-12 Hr fasting is Required"
