@@ -6,8 +6,8 @@
 }
 
 .selfCheck_circle>img {
-    height: 6rem;
-    width: 6rem;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
     background-color: #ffffff;
     text-align: center;
@@ -19,6 +19,7 @@
     font-weight: bold;
     color: #000C83;
     margin: 0;
+
 }
 
 @media (max-width: 800px) {

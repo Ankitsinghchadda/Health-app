@@ -3,12 +3,12 @@ import "./LabTestCard.css";
 const LabTestCards = (props: any) => {
   return (
     <div className="labtest_card">
+      <div className="card_offer ">Extra {props.offPercentage}% off</div>
       <div className="card_firstSection">
         <div className="card_heading">
           <h3>{props.heading}</h3>
           <h4 style={{ color: "red" }}>{props.requirement}</h4>
         </div>
-        <div className="card_offer">Extra {props.offPercentage}% off</div>
       </div>
       <div className="card_secondSection">
         <div className="card_description">

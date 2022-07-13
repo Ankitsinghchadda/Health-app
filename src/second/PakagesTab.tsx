@@ -3,13 +3,14 @@ import "./PakagesTab.css";
 import LabTestCards from "../components/LabTestCards";
 import PakagesCard from "../components/PakagesCard";
 import Data from "../testData/individual.json";
+import InSlider from "../components/InSlider";
 const PakagesTab = () => {
   const indivualData = Data.Individualdata;
   const pakageData = Data.PakagesData;
 
   const individualTestDiv = indivualData.map((data, index) => {
     return (
-      <div key={data.heading + index}>
+      <div key={"bCard " + data.heading + index}>
         <LabTestCards
           heading={data.heading}
           requirement={data.requirement}
@@ -24,7 +25,7 @@ const PakagesTab = () => {
   });
   const pakageTestDiv = pakageData.map((data, index) => {
     return (
-      <div key={data.heading + index}>
+      <div key={"bCard " + data.heading + index}>
         <PakagesCard
           heading={data.heading}
           requirement={data.requirement}
@@ -63,45 +64,50 @@ const PakagesTab = () => {
     }
   };
   return (
-    <div className="tabPakage_main">
-      <div className="tabbed">
-        <ul role="tablist">
-          <li role="presentation">
-            <a
-              href="#login"
-              id="loginTab"
-              role="tab"
-              aria-selected={true}
-              className="fromRight "
-              onClick={handleClick}
-            >
-              Individual Tests
-            </a>
-          </li>
-          <li role="presentation" className="noBorder">
-            <a
-              href="#register"
-              id="registerTab"
-              role="tab"
-              tabIndex={-1}
-              className="fromLeft"
-              onClick={handleClick}
-            >
-              Packages
-            </a>
-          </li>
-        </ul>
-        <section id="sectionLogin" role="tabpanel" aria-labelledby="loginTab">
-          {individualTestDiv}
-        </section>
-        <section
-          id="sectionRegister"
-          role="tabpanel"
-          aria-labelledby="registerTab"
-          hidden={true}
-        >
-          {pakageTestDiv}
-        </section>
+    <div className="pakagesTab_div">
+      <div className="third_section desktopElement">
+        <InSlider />
+      </div>
+      <div className="tabPakage_main">
+        <div className="tabbed">
+          <ul role="tablist">
+            <li role="presentation">
+              <a
+                href="#login"
+                id="loginTab"
+                role="tab"
+                aria-selected={true}
+                className="fromRight "
+                onClick={handleClick}
+              >
+                Individual Tests
+              </a>
+            </li>
+            <li role="presentation" className="noBorder">
+              <a
+                href="#register"
+                id="registerTab"
+                role="tab"
+                tabIndex={-1}
+                className="fromLeft"
+                onClick={handleClick}
+              >
+                Packages
+              </a>
+            </li>
+          </ul>
+          <section id="sectionLogin" role="tabpanel" aria-labelledby="loginTab">
+            {individualTestDiv}
+          </section>
+          <section
+            id="sectionRegister"
+            role="tabpanel"
+            aria-labelledby="registerTab"
+            hidden={true}
+          >
+            {pakageTestDiv}
+          </section>
+        </div>
       </div>
     </div>
   );

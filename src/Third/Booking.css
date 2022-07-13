@@ -1,3 +1,17 @@
+.booking_div {
+    background-color: #F5F5F5;
+
+}
+
+.booking_div>h2 {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1.5rem 2.5rem;
+    background-color: white;
+    border-radius: 0.4rem;
+}
+
 .BookingFor_div {
     font-size: 80%;
     margin: 1rem auto;
@@ -5,6 +19,7 @@
     background-color: #F5F5F5;
     box-sizing: border-box;
     padding-bottom: 8rem;
+
 }
 
 .bookedFor {
@@ -124,6 +139,7 @@
 .appointmentOption {
     font-size: 0.8rem;
     border: 1px solid black;
+    background-color: white;
     border-radius: 0.3rem;
     padding: 0.2rem;
     margin: 0.5rem 1rem;
@@ -135,6 +151,10 @@
     justify-content: space-between;
     cursor: pointer;
 
+}
+
+.appointmentSection>h4 {
+    font-size: 1rem;
 }
 
 .hideOptions {
@@ -155,6 +175,38 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+@media (min-width: 1100px) {
+
+    .BookingFor_div {
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .BookingFor_div>div {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bookedFor,
+    .pickUpLocation,
+    .selectBookingSlot {
+        width: 95%;
+        margin: 1rem auto;
+    }
+
+    .selectBookingSlot {
+        height: 100%;
+    }
+
+
 }
 
 

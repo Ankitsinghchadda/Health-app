@@ -15,6 +15,7 @@ import BottomNavigationElement from "./components/BottomNavigationElement";
 import Radiology from "./HealthTests/Radiology/Radiology";
 import PrescriptionDialog from "./components/PrescriptionDialog";
 import PakagesTab from "./second/PakagesTab";
+import ListPakage from "./DesktopPages/ListPakage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/TestPakage" element={<PakagesTab />} />
           <Route path="/onSummary" element={<OrderSummary />} />
           <Route path="/Radiology" element={<Radiology />} />
+          <Route path="/BookingPakages" element={<ListPakage />} />
         </Routes>
         {<BottomNavigationElement />}
       </BrowserRouter>

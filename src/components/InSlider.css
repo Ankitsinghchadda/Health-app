@@ -55,7 +55,7 @@ div#slider figure div {
 }
 
 div#slider figure div img {
-    width: 47rem;
+    width: 45rem;
     object-fit: contain;
     border-radius: 0.4rem;
 }

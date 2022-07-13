@@ -1,8 +1,18 @@
 .labtest_card {
     margin: 1rem;
-    padding: 1rem 2rem;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 0.4rem;
+    padding: 1rem 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+}
+
+.card_offer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 0.4rem;
 }
 
 .labtest_card:first-child {
@@ -26,7 +36,6 @@
     justify-content: space-between;
     align-items: center;
 }
-
 
 .card_heading>h3,
 .card_heading>h4 {
@@ -56,15 +65,18 @@
     font-weight: 600;
 }
 
-.card_price>div>span {
+.card_price>div {
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
 }
 
 .labtest_addButton {
     font-size: 1rem;
     border: none;
     border-radius: 0.4rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.6rem;
+    width: 100%;
     background-color: #000C83;
     color: white;
     font-weight: bold;
@@ -93,6 +105,8 @@
 
 }
 
+
+
 @media (max-width:1350px) {
     .card_description {
         width: 20rem;
@@ -105,6 +119,8 @@
     }
 }
 
+
+
 @media (max-width:700px) {
     .card_description {
         width: 15rem;
@@ -112,7 +128,7 @@
 
 
     .labtest_card {
-        margin: 1rem 0rem;
+        margin: 1rem auto;
         padding: 1rem;
         width: 90%;
         box-shadow: none;
@@ -125,9 +141,9 @@
         font-size: 0.8rem;
     }
 
-    .card_price>span {
+    .card_price>div>span {
         font-size: 1rem;
-        font-weight: bolder;
+        font-weight: bold;
     }
 
     .card_availabity>h3,
@@ -148,7 +164,7 @@
 
     .card_offer {
         font-size: 0.8rem;
-        margin: 0.5rem 0.25rem;
+        /* margin: 0.5rem 0.25rem; */
     }
 
     .card_heading>h4,
@@ -165,14 +181,14 @@
 
     .card_offer {
         font-size: 0.7rem;
-        margin: 0.5rem 0.25rem;
+        /* margin: 0.5rem 0.25rem; */
     }
 
     .labtest_card {
         padding: 0.5rem 1rem;
     }
 
-    .card_price>h3 {
+    .card_price>div>h3 {
         font-size: 0.8rem;
     }
 }
