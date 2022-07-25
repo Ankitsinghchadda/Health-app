@@ -96,3 +96,16 @@
     color: rgb(6, 6, 6);
     background-color: rgb(192, 195, 216);
 }
+
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation6.MuiSnackbarContent-root.css-1gz1y6s {
+    background-color: #0EB6FF;
+    font-size: 1.2rem;
+
+}
+
+.checkoutButton {
+    background-color: #000C83;
+    color: white;
+    font-size: 1.2rem;
+}

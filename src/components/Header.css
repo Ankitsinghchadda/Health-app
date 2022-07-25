@@ -1,8 +1,7 @@
 .header_div {
     position: sticky;
     top: 0;
-    z-index: 10;
-
+    z-index: 1;
 
 }
 
@@ -36,7 +35,9 @@
     font-size: 1.3rem;
     padding: 0.2rem 1rem;
     cursor: pointer;
+
 }
+
 
 .header_profile>p {
     margin: 0;
@@ -140,13 +141,22 @@
     outline: none;
 }
 
+.header_profile:hover~#action .menu,
+#action:hover .menu {
+    display: block;
+    opacity: 1;
+    top: 120px;
+    visibility: visible;
+}
+
 
 /* For DropDown Profile Menu */
 
 .action {
     position: fixed;
     right: 30px;
-    top: 20px;
+    top: 13px;
+
 }
 
 .action .menu {
@@ -161,12 +171,18 @@
     top: 80px;
     visibility: hidden;
     opacity: 0;
+    display: none;
+    transition: 0.2s;
+
 }
+
+
 
 .action .menu.active {
     opacity: 1;
     top: 120px;
     visibility: visible;
+    display: block;
 }
 
 .action .menu::before {

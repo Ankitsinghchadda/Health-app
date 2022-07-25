@@ -10,28 +10,28 @@ const InSlider = () => {
     <div id="slider">
       <figure>
         <div>
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage one" />
         </div>
 
         <div>
           {" "}
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage two" />
         </div>
         <div>
           {" "}
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage three" />
         </div>
         <div>
           {" "}
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage four" />
         </div>
         <div>
           {" "}
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage five" />
         </div>
         <div>
           {" "}
-          <img src={Slide1} alt="SliderImage" />
+          <img src={Slide1} alt="SliderImage six" />
         </div>
       </figure>
     </div>

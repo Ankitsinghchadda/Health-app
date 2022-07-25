@@ -30,7 +30,7 @@ const PopularPakages = (props: any) => {
     <button
       className="checkoutButton"
       onClick={() => {
-        navigate("/onSummary");
+        navigate("/selectLab");
       }}
     >
       Show Labs
@@ -81,6 +81,7 @@ const PopularPakages = (props: any) => {
       </div>
       <Snackbar
         sx={{ marginBottom: "5rem" }}
+        className="snackbar"
         anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}

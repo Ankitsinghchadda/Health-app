@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import HeaderOptions from "./HeaderOptions";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { HomeSharp } from "@mui/icons-material";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
-import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
-import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import Logo from "../image/LabtinLogo.png";
 import HomeIcon from "@mui/icons-material/Home";
@@ -14,42 +10,50 @@ import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import HelpIcon from "@mui/icons-material/Help";
 import LogoutIcon from "@mui/icons-material/Logout";
-import LoginIcon from "@mui/icons-material/Login";
 import { Link } from "react-router-dom";
-import LeftDrawer from "./LeftDrawer";
-import { Modal } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import PrescriptionDialog from "./PrescriptionDialog";
 import { useNavigate } from "react-router-dom";
 import CircleImage from "./CircleImage";
 import Tick from "../image/21.png";
+import { useDispatch } from "react-redux";
+import { logout } from "../store/AuthSlice";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handlenav1 = (e: any) => {
     e.preventDefault();
-    navigate(`/BookingPakages`, {
+    navigate(`/BookingPackages`, {
       state: { name: "HealthPakages" },
     });
   };
   const handlenav2 = (e: any) => {
     e.preventDefault();
-    navigate(`/BookingPakages`, {
+    navigate(`/BookingPackages`, {
       state: { name: "IndividualTests" },
     });
   };
   const handlenav3 = (e: any) => {
     e.preventDefault();
-    navigate(`/BookingPakages`, {
+    navigate(`/BookingPackages`, {
       state: { name: "Scan&Imaging" },
     });
   };
 
-  const handledrop = (e: any) => {
-    const toggleMenu: any = document.querySelector(".menu");
-    toggleMenu.classList.toggle("active");
+  const handleLogout = (e: any) => {
+    signOut(auth)
+      .then(() => {
+        dispatch(logout());
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
   return (
     <div className="header_div">
       <div className="header_main">
@@ -135,68 +139,72 @@ const Header = () => {
           <button onClick={handlenav2}>Individual Tests</button>
           <button onClick={handlenav3}>Health Scans & Imaging</button>
         </div>
-        <div className="header_profile" onClick={handledrop}>
+        <div className="header_profile" /*onClick={handledrop}*/>
           <PersonIcon fontSize="large" />
           <p>Profile</p>
         </div>
-      </div>
-      <div className="action">
-        <div className="menu">
-          <CircleImage image={Tick} name="Surya Thambiereddy" />
-          <ul>
-            <li>
-              <Link to="/">
-                <div className="sidebar_icons1">
-                  <HomeIcon /> <span className="icon_name1">Home</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Booking">
-                <div className="sidebar_icons1">
-                  <CalendarMonthIcon />{" "}
-                  <span className="icon_name1">My Bookings</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/MyReports">
-                <div className="sidebar_icons1">
-                  <SummarizeRoundedIcon />{" "}
-                  <span className="icon_name1">My Reports</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Address">
-                <div className="sidebar_icons1">
-                  <LocationOnRoundedIcon />{" "}
-                  <span className="icon_name1">Address</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Offers">
-                <div className="sidebar_icons1">
-                  <LocalOfferIcon /> <span className="icon_name1">Offers</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Help">
-                <div className="sidebar_icons1">
-                  <HelpIcon /> <span className="icon_name1">Help</span>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/Logout">
-                <div className="sidebar_icons1">
-                  <LogoutIcon /> <span className="icon_name1">Logout</span>
-                </div>
-              </Link>
-            </li>
-          </ul>
+        <div className="action" id="action">
+          <div className="menu ">
+            <CircleImage image={Tick} name="Surya Thambiereddy" />
+            <ul>
+              <li>
+                <Link to="/">
+                  <div className="sidebar_icons1">
+                    <HomeIcon /> <span className="icon_name1">Home</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Booking">
+                  <div className="sidebar_icons1">
+                    <CalendarMonthIcon />{" "}
+                    <span className="icon_name1">My Bookings</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/MyReport">
+                  <div className="sidebar_icons1">
+                    <SummarizeRoundedIcon />{" "}
+                    <span className="icon_name1">My Reports</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Address">
+                  <div className="sidebar_icons1">
+                    <LocationOnRoundedIcon />{" "}
+                    <span className="icon_name1">Address</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Offers">
+                  <div className="sidebar_icons1">
+                    <LocalOfferIcon />{" "}
+                    <span className="icon_name1">Offers</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Help">
+                  <div className="sidebar_icons1">
+                    <HelpIcon /> <span className="icon_name1">Help</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Logout">
+                  <div className="sidebar_icons1">
+                    <LogoutIcon />{" "}
+                    <span className="icon_name1" onClick={handleLogout}>
+                      Logout
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

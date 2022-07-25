@@ -9,12 +9,14 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SummarizeRoundedIcon from "@mui/icons-material/SummarizeRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import CloseIcon from "@mui/icons-material/Close";
 import HelpIcon from "@mui/icons-material/Help";
 import LogoutIcon from "@mui/icons-material/Logout";
 import LoginIcon from "@mui/icons-material/Login";
 import "./LeftDrawer.css";
 import { Link } from "react-router-dom";
 import Tick from "../image/21.png";
+import { log } from "console";
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -26,28 +28,37 @@ export default function TemporaryDrawer() {
     right: false,
   });
 
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
+  const handleModal = () => {
+    const modal = document.querySelector(".menuModal");
+    const header: any = document.querySelector(".header_div");
+    header.style.display = "none";
 
-      setState({ ...state, [anchor]: open });
-    };
+    modal?.classList.add("activeModal");
+  };
+  const handleCross = () => {
+    const modal = document.querySelector(".menuModal");
+    const header: any = document.querySelector(".header_div");
+    header.style.display = "block";
+
+    modal?.classList.remove("activeModal");
+  };
+
+  React.useEffect(() => {
+    handleCross();
+  });
 
   const list = (anchor: Anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
     >
-      <CircleImage image={Tick} name="Surya Thambiereddy" />
+      {/* <CircleImage image={Tick} name="Surya Thambiereddy" /> */}
+      <div className="selfCheck_icons_modal">
+        <div className="selfCheck_circle_modal">
+          <img src={Tick} alt="" />
+        </div>
+        <h3>Surya Thambiereddy</h3>
+      </div>
       <div className="sidebar_menu">
         <Link to="/">
           <div className="sidebar_icons">
@@ -95,16 +106,17 @@ export default function TemporaryDrawer() {
         <HeaderOptions
           Icon={MenuRoundedIcon}
           Title="Menu"
-          onClick={toggleDrawer("left", true)}
+          onClick={handleModal}
         />
-        <Drawer
-          anchor={"left"}
-          open={state["left"]}
-          onClose={toggleDrawer("left", false)}
-        >
-          {list("left")}
-        </Drawer>
       </React.Fragment>
+      <div className="menuModal">
+        <CloseIcon
+          fontSize="large"
+          className="closeIcon"
+          onClick={handleCross}
+        />
+        {list("bottom")}
+      </div>
     </div>
   );
 }

@@ -15,6 +15,7 @@ import SThirdIcon from "../image/3.png";
 import SFourthIcon from "../image/4.png";
 import SFifthIcon from "../image/5.png";
 import InSlider from "../components/InSlider";
+import DSlider from "../components/DSlider";
 import Crousel from "../components/Crousels/Crousel";
 import MobileCrousel from "../components/Crousels/MobileCrousel";
 
@@ -95,7 +96,7 @@ const Landingpage = () => {
         <MobileCrousel />
       </div>
       <div className="third_section desktopElement">
-        <InSlider />
+        <DSlider />
       </div>
 
       <div className="fourth_section">
@@ -112,7 +113,8 @@ const Landingpage = () => {
       </div>
       <div className="fifth_section">
         <div className="fifth_section_heading">
-          Most Commonly Booked Tests <button>see more</button>
+          Most Commonly Booked Tests{" "}
+          <button onClick={() => navigate("/TestPakage")}>see more</button>
         </div>
         <div className="labtest_cards_list desktopElement">
           <Crousel crousalData="Tests" />
@@ -140,7 +142,8 @@ const Landingpage = () => {
       </div>
       <div className="fifth_section">
         <div className="fifth_section_heading">
-          Most Commonly Booked Pakages <button>see more</button>
+          Most Commonly Booked Pakages{" "}
+          <button onClick={() => navigate("/TestPakage")}>see more</button>
         </div>
         <div className="labtest_cards_list desktopElement">
           <Crousel crousalData="pakages" />
