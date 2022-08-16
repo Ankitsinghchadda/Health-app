@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Snackbar, { SnackbarOrigin } from "@mui/material/Snackbar";
 import { useNavigate } from "react-router-dom";
 import "./OrderSummary.css";
 import discountIcon from "./image/20.png";
+import { useSelector, useDispatch } from "react-redux";
+import { getSelectedTestList } from "./store/AuthSlice";
 
 export interface State extends SnackbarOrigin {
   open: boolean;
@@ -16,6 +18,9 @@ const OrderSummary = () => {
   });
   const navigate = useNavigate();
   const { vertical, horizontal, open } = state;
+  const testList = useSelector(getSelectedTestList);
+  const [totalPrice, setTestPrice] = useState(0);
+  const [totalPayable, settotalPayable] = useState(0);
 
   const handleClose = () => {
     setState({ ...state, open: false });
@@ -33,6 +38,15 @@ const OrderSummary = () => {
       Proceed To Pay
     </button>
   );
+
+  useEffect(() => {
+    if (testList.length > 0) {
+      testList.map((test: any) => {
+        setTestPrice(parseInt(test.previousPrice) + totalPrice);
+        settotalPayable(parseInt(test.currentPrice) + totalPayable);
+      });
+    }
+  }, [testList]);
   return (
     <div className="Summary_main">
       <div className="OrderSummary_main desktopElement ">
@@ -84,7 +98,7 @@ const OrderSummary = () => {
           <h3>Bill Details</h3>
           <div className="billCalc">
             <div className="billrow">
-              <p>Test Total</p> <h5>₹250</h5>
+              <p>Test Total</p> <h5>₹{totalPrice}</h5>
             </div>
             <div className="billrow">
               <p>Sample Collection Charges</p>{" "}
@@ -104,7 +118,10 @@ const OrderSummary = () => {
               </div>
             </div>
             <div className="billrow">
-              <p>Applied Discount</p> <h5>₹0</h5>
+              <p>Applied Discount</p> <h5>₹{totalPrice - totalPayable}</h5>
+            </div>
+            <div className="billrow">
+              <p>Amount To Pay</p> <h5>₹{totalPayable}</h5>
             </div>
           </div>
         </div>
@@ -113,7 +130,7 @@ const OrderSummary = () => {
           anchorOrigin={{ vertical, horizontal }}
           open={true}
           onClose={handleClose}
-          message="Total ₹250"
+          message={`Total ₹${totalPayable}`}
           action={action}
           key={vertical + horizontal}
         />

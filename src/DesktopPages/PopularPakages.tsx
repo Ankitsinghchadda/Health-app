@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./PopularPakages.css";
 import Snackbar, { SnackbarOrigin } from "@mui/material/Snackbar";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  getSelectedTestList,
+  selectTest,
+  removeTest,
+} from "../store/AuthSlice";
 
 export interface State extends SnackbarOrigin {
   open: boolean;
@@ -9,6 +15,9 @@ export interface State extends SnackbarOrigin {
 
 const PopularPakages = (props: any) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const NoOfTest = useSelector(getSelectedTestList);
+  console.log(NoOfTest);
 
   const [state, setState] = React.useState<State>({
     open: false,
@@ -23,7 +32,9 @@ const PopularPakages = (props: any) => {
   };
 
   const handleClose = () => {
-    setState({ ...state, open: false });
+    if (NoOfTest.length <= 0) {
+      setState({ ...state, open: false });
+    }
   };
 
   const action = (
@@ -36,6 +47,11 @@ const PopularPakages = (props: any) => {
       Show Labs
     </button>
   );
+  useEffect(() => {
+    if (NoOfTest.length > 0) {
+      setState({ ...state, open: true });
+    }
+  }, [NoOfTest]);
 
   const handleBooking = (e: any) => {
     if (e.target.innerHTML === "Book Now") {
@@ -43,11 +59,14 @@ const PopularPakages = (props: any) => {
       e.target.classList.add("RemoveNowButton");
       e.target.innerHTML = "Remove";
       setState({ ...state, open: true });
+      dispatch(selectTest(props));
     } else {
       e.target.innerHTML = "Book Now";
       e.target.classList.remove("RemoveNowButton");
 
       e.target.classList.add("BookNowButton");
+      dispatch(removeTest(props));
+
       setState({ ...state, open: false });
     }
   };
@@ -71,9 +90,9 @@ const PopularPakages = (props: any) => {
         </div>
         <div className="pakage_price">
           <span style={{ textDecoration: "line-through", color: "red" }}>
-            ₹6000
+            ₹{props.previousPrice}
           </span>{" "}
-          <span style={{ color: "purple" }}>₹3000/-</span>
+          <span style={{ color: "purple" }}>₹{props.currentPrice}/-</span>
         </div>
         <button className="BookNowButton" onClick={handleBooking}>
           Book Now
@@ -85,7 +104,7 @@ const PopularPakages = (props: any) => {
         anchorOrigin={{ vertical, horizontal }}
         open={open}
         onClose={handleClose}
-        message="1 item in Cart"
+        message={`${NoOfTest.length} test selected`}
         action={action}
         key={vertical + horizontal}
       />

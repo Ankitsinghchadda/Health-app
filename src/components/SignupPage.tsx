@@ -26,18 +26,18 @@ const SignupPage = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: "Jane Q. User",
+          displayName: usersName,
           photoURL: "https://example.com/jane-q-user/profile.jpg",
         })
           .then(() => {
             // Profile updated!
+            dispatch(login(user.providerData));
             // ...
           })
           .catch((error) => {
             // An error occurred
             // ...
           });
-        dispatch(login(user.providerData));
 
         setDoc(doc(db, "users", user.uid), {
           usersName,

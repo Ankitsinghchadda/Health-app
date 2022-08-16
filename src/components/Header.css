@@ -173,17 +173,18 @@
     opacity: 0;
     display: none;
     transition: 0.2s;
+    text-align: center;
 
 }
 
-
-
-.action .menu.active {
-    opacity: 1;
-    top: 120px;
-    visibility: visible;
-    display: block;
+.editButton {
+    margin: 0;
+    border: none;
+    color: #000C83;
+    background-color: white;
+    font-weight: 600;
 }
+
 
 .action .menu::before {
     background-color: #fff;

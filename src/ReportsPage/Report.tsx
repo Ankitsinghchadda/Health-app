@@ -6,9 +6,12 @@ import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 import Tick from "../image/21.png";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "../store/AuthSlice";
 
 const Report = () => {
   const navigate = useNavigate();
+  const Loggeduser = useSelector(selectUser);
   return (
     <div className="reports_div">
       <div className="report_heading">
@@ -21,9 +24,9 @@ const Report = () => {
         <h3>My Reports</h3>
       </div>
       <div className="report_person">
-        <CircleImage image={Tick} name="Surya" />
-        <CircleImage image={Tick} name="Varun" />
-        <CircleImage image={Tick} name="Jay Kiran" />
+        <CircleImage image={Tick} name={Loggeduser[0].displayName} />
+        {/* <CircleImage image={Tick} name="Varun" />
+        <CircleImage image={Tick} name="Jay Kiran" /> */}
       </div>
       <div className="reports_download">
         <div className="pdf_download_div">

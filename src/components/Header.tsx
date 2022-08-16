@@ -17,11 +17,12 @@ import { useNavigate } from "react-router-dom";
 import CircleImage from "./CircleImage";
 import Tick from "../image/21.png";
 import { useDispatch } from "react-redux";
-import { logout } from "../store/AuthSlice";
+import { logout, selectUser } from "../store/AuthSlice";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-
+import { useSelector } from "react-redux";
 const Header = () => {
+  const Loggeduser: any = JSON.parse(localStorage.getItem("user") || "null");
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -78,27 +79,6 @@ const Header = () => {
             <img src={Logo} alt="Logo" />
           </div>
         </Link>
-        {/* <div className="header_menu">
-          <div className="menuItems">
-            <Link to="/">
-              <HeaderOptions Icon={HomeSharp} Title={"Home"} />
-            </Link>
-            <Link to="/Booking">
-              <HeaderOptions
-                Icon={CalendarMonthRoundedIcon}
-                Title={"Bookings"}
-              />
-            </Link>
-            <Link to="/MyReport">
-              <HeaderOptions Icon={SummarizeRoundedIcon} Title={"My Report"} />
-            </Link>
-            <Link to="/Support">
-              {" "}
-              <HeaderOptions Icon={SupportAgentRoundedIcon} Title={"Support"} />
-            </Link>
-            <LeftDrawer />
-          </div>
-        </div> */}
         <div className="searchwithPrescreption">
           <div className="searchbar">
             <input
@@ -120,7 +100,6 @@ const Header = () => {
               setShow(true);
             }}
           >
-            {/* <HeaderOptions Icon={NoteAddRoundedIcon} Title={"Prescription"} /> */}
             <NoteAddRoundedIcon fontSize="large" />
           </div>
 
@@ -145,7 +124,11 @@ const Header = () => {
         </div>
         <div className="action" id="action">
           <div className="menu ">
-            <CircleImage image={Tick} name="Surya Thambiereddy" />
+            <CircleImage
+              image={Tick}
+              name={Loggeduser[0].displayName || "User"}
+            />
+            <button className="editButton">Edit Profile</button>
             <ul>
               <li>
                 <Link to="/">
